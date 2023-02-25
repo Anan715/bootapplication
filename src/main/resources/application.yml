@@ -1,0 +1,9 @@
+server:
+  port: 9080
+
+spring:
+  profiles:
+    include: @bootdemo.profile@
+    application:
+      name: bootapplication
+      token-name: X-TOKEN
