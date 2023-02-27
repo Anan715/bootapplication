@@ -1,17 +1,11 @@
 package com.alilang.stu.controller;
 
 
-import com.alilang.stu.entity.Book;
 import com.alilang.stu.entity.MyEvent;
-import com.alilang.stu.service.IBookService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationEventPublisher;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-
-import javax.annotation.Resource;
-import java.util.List;
 
 /**
  * <p>

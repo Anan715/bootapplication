@@ -2,7 +2,7 @@ package com.alilang.stu.service.impl;
 
 import com.alilang.stu.entity.Book;
 import com.alilang.stu.mapper.BookMapper;
-import com.alilang.stu.service.IBookService;
+import com.alilang.stu.service.BookService;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import org.springframework.stereotype.Service;
 
@@ -18,7 +18,7 @@ import java.util.List;
  * @since 2023-02-09
  */
 @Service
-public class BookServiceImpl extends ServiceImpl<BookMapper, Book> implements IBookService {
+public class BookServiceImpl extends ServiceImpl<BookMapper, Book> implements BookService {
 
 
     public void test(){

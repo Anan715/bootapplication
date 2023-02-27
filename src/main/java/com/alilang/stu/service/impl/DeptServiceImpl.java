@@ -2,7 +2,7 @@ package com.alilang.stu.service.impl;
 
 import com.alilang.stu.entity.Dept;
 import com.alilang.stu.mapper.DeptMapper;
-import com.alilang.stu.service.IDeptService;
+import com.alilang.stu.service.DeptService;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import org.springframework.stereotype.Service;
 
@@ -15,6 +15,6 @@ import org.springframework.stereotype.Service;
  * @since 2023-02-09
  */
 @Service
-public class DeptServiceImpl extends ServiceImpl<DeptMapper, Dept> implements IDeptService {
+public class DeptServiceImpl extends ServiceImpl<DeptMapper, Dept> implements DeptService {
 
 }

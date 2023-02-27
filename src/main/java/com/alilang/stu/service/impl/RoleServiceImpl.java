@@ -2,7 +2,7 @@ package com.alilang.stu.service.impl;
 
 import com.alilang.stu.entity.Role;
 import com.alilang.stu.mapper.RoleMapper;
-import com.alilang.stu.service.IRoleService;
+import com.alilang.stu.service.RoleService;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import org.springframework.stereotype.Service;
 
@@ -15,6 +15,6 @@ import org.springframework.stereotype.Service;
  * @since 2023-02-09
  */
 @Service
-public class RoleServiceImpl extends ServiceImpl<RoleMapper, Role> implements IRoleService {
+public class RoleServiceImpl extends ServiceImpl<RoleMapper, Role> implements RoleService {
 
 }

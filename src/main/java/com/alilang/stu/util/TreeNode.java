@@ -1,5 +1,9 @@
 package com.alilang.stu.util;
 
+import com.theokanning.openai.completion.CompletionRequest;
+import com.theokanning.openai.service.OpenAiService;
+import org.springframework.transaction.annotation.Transactional;
+
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -51,5 +55,22 @@ public class TreeNode {
             }
         }
         return root;
+    }
+
+
+    public static void main(String[] args) {
+        String token = "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";//System.getenv("OPENAI_TOKEN");
+
+        OpenAiService service = new OpenAiService(token);
+        CompletionRequest completionRequest = CompletionRequest.builder()
+                .model("text-davinci-003")
+                .prompt("今天天气怎么样？")
+                .temperature(0.5)
+                .maxTokens(2048)
+                .topP(1D)
+                .frequencyPenalty(0D)
+                .presencePenalty(0D)
+                .build();
+        service.createCompletion(completionRequest).getChoices().forEach(System.out::println);
     }
 }

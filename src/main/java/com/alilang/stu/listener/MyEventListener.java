@@ -2,19 +2,17 @@ package com.alilang.stu.listener;
 
 import com.alilang.stu.entity.Book;
 import com.alilang.stu.entity.MyEvent;
-import com.alilang.stu.service.IBookService;
-import org.springframework.beans.factory.annotation.Autowired;
+import com.alilang.stu.service.BookService;
 import org.springframework.context.ApplicationListener;
 import org.springframework.stereotype.Component;
 
 import javax.annotation.Resource;
-import java.util.function.Consumer;
 
 @Component
 public class MyEventListener implements ApplicationListener<MyEvent> {
 
     @Resource
-    private IBookService bookService;
+    private BookService bookService;
 
     @Override
     public void onApplicationEvent(MyEvent event) {

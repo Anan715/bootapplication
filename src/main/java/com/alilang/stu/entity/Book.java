@@ -17,7 +17,7 @@ import lombok.experimental.Accessors;
  */
 @Data
 @EqualsAndHashCode(callSuper = false)
-@Accessors
+@Accessors(chain = true)
 public class Book implements Serializable {
 
     private static final long serialVersionUID = 1L;
@@ -25,8 +25,8 @@ public class Book implements Serializable {
     /**
      * 图书ID
      */
-    @TableId(value = "book_id", type = IdType.AUTO)
-    private Long bookId;
+    @TableId(value = "id", type = IdType.AUTO)
+    private Long id;
 
     /**
      * 图书名称
