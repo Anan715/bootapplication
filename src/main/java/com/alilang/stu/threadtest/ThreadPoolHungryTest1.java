@@ -5,10 +5,7 @@ import lombok.extern.slf4j.Slf4j;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Random;
-import java.util.concurrent.ExecutionException;
-import java.util.concurrent.ExecutorService;
-import java.util.concurrent.Executors;
-import java.util.concurrent.Future;
+import java.util.concurrent.*;
 
 /**
  * 线程池饥饿现象解决
@@ -24,6 +21,10 @@ public class ThreadPoolHungryTest1 {
     }
 
     public static void main(String[] args) {
+        // 阿里推荐创建线程池的方式
+        ThreadPoolExecutor threadPool = new ThreadPoolExecutor(1, 2, 1000, TimeUnit.MILLISECONDS, new ArrayBlockingQueue<Runnable>(10),Executors.defaultThreadFactory(),new ThreadPoolExecutor.AbortPolicy());
+
+
         ExecutorService waiterPool = Executors.newFixedThreadPool(1);
         ExecutorService cookPool = Executors.newFixedThreadPool(1);
         waiterPool.execute(() -> {

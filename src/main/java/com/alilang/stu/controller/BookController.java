@@ -33,18 +33,29 @@ public class BookController {
     private ThreadInsertTest threadInsertTest;
 
     @GetMapping("/book/list")
-    public List<Book> getBookList(){
+    public List<Book> getBookList() {
         return bookService.list();
     }
 
     @GetMapping("/tra/test")
-    public void traTest(){
-         traTest.addBook1();
+    public void traTest() {
+        traTest.addBook1();
     }
 
     @GetMapping("/thread/insert")
-    public void threadTest(){
+    public void threadTest() {
         threadInsertTest.batchHandle();
+    }
+
+    @GetMapping("/update/no/lock")
+    public void updateNoLock() {
+        bookService.updateBook();
+    }
+
+
+    @GetMapping("/update/with/lock")
+    public void updateWithLock() {
+        bookService.updateBookWithLock();
     }
 
 

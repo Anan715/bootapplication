@@ -7,3 +7,6 @@ spring:
     application:
       name: bootapplication
       token-name: X-TOKEN
+mybatis-plus:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
