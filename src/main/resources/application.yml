@@ -10,3 +10,8 @@ spring:
 mybatis-plus:
   configuration:
     log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+
+
+ali:
+  enable: true
+  platform: "测试项目"

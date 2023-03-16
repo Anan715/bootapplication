@@ -1,6 +1,7 @@
 package com.alilang.stu.controller;
 
 
+import com.alilang.annotation.AliLog;
 import com.alilang.stu.entity.Book;
 import com.alilang.stu.service.BookService;
 import com.alilang.stu.transactionaldemo.ThreadInsertTest;
@@ -52,7 +53,7 @@ public class BookController {
         bookService.updateBook();
     }
 
-
+    @AliLog
     @GetMapping("/update/with/lock")
     public void updateWithLock() {
         bookService.updateBookWithLock();

@@ -52,11 +52,6 @@ public class BookServiceImpl extends ServiceImpl<BookMapper, Book> implements Bo
         ids.add(3l);
         ids.add(4l);
         List<Book> books = baseMapper.listForUpdate(ids);
-        try {
-            Thread.sleep(10000);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
         books.stream().forEach(i -> i.setName("JAVA思想"));
         this.updateBatchById(books);
 
